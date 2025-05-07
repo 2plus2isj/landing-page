@@ -38,15 +38,19 @@
     .checkbox-wrapper {
       margin-top: 20px;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      text-align: center;
     }
     .checkbox-wrapper input[type="checkbox"] {
       transform: scale(1.2);
-      margin-right: 4px;
+      margin: 0;
     }
     .checkbox-wrapper label {
       margin: 0;
+      font-size: 14px;
     }
     .checkbox-wrapper a {
       color: #007bff;
@@ -71,12 +75,12 @@
       margin-top: 40px;
       display: flex;
       justify-content: space-around;
+      flex-wrap: wrap;
     }
     .modal {
       display: none;
       position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      top: 0; left: 0; width: 100%; height: 100%;      background-color: rgba(0, 0, 0, 0.5);
     }
     .modal-content {
       background-color: white;
@@ -85,6 +89,29 @@
       width: 80%;
       max-width: 600px;
       border-radius: 6px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px;
+        margin: 20px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      input, select {
+        padding: 8px;
+        font-size: 14px;
+      }
+      .submit-btn {
+        font-size: 14px;
+        padding: 10px;
+      }
+      .qrcodes {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
     }
   </style>
 </head>
@@ -149,7 +176,7 @@
       let options = "";
       if (val === "生活服务") {
         options = `
-          <label>所属细分行业：</label>
+          <label>具体行业：</label>
           <select>
             <option value="">请选择</option>
             <option>家政服务</option>
@@ -158,7 +185,7 @@
           </select>`;
       } else if (val === "教育培训") {
         options = `
-          <label>所属细分行业：</label>
+          <label>具体行业：</label>
           <select>
             <option value="">请选择</option>
             <option>职业教育</option>
@@ -167,7 +194,7 @@
           </select>`;
       } else if (val === "文化传媒") {
         options = `
-          <label>所属细分行业：</label>
+          <label>具体行业：</label>
           <select>
             <option value="">请选择</option>
             <option>广告策划</option>
