@@ -23,6 +23,7 @@
     h1 {
       color: #007bff;
       font-size: 24px;
+      text-align: center;
     }
     label {
       display: block;
@@ -36,12 +37,12 @@
     }
     .checkbox-wrapper {
       margin-top: 20px;
+      display: flex;
+      align-items: center;
     }
     .checkbox-wrapper input[type="checkbox"] {
       transform: scale(1.2);
-    }
-    .checkbox-wrapper label {
-      display: inline;
+      margin-right: 8px;
     }
     .checkbox-wrapper a {
       color: #007bff;
@@ -146,7 +147,7 @@
       let options = "";
       if (val === "生活服务") {
         options = `
-          <label>细分类：</label>
+          <label>所属细分行业：</label>
           <select>
             <option value="">请选择</option>
             <option>家政服务</option>
@@ -155,7 +156,7 @@
           </select>`;
       } else if (val === "教育培训") {
         options = `
-          <label>细分类：</label>
+          <label>所属细分行业：</label>
           <select>
             <option value="">请选择</option>
             <option>职业教育</option>
@@ -164,7 +165,7 @@
           </select>`;
       } else if (val === "文化传媒") {
         options = `
-          <label>细分类：</label>
+          <label>所属细分行业：</label>
           <select>
             <option value="">请选择</option>
             <option>广告策划</option>
