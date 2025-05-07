@@ -39,10 +39,14 @@
       margin-top: 20px;
       display: flex;
       align-items: center;
+      justify-content: center;
     }
     .checkbox-wrapper input[type="checkbox"] {
       transform: scale(1.2);
-      margin-right: 8px;
+      margin-right: 4px;
+    }
+    .checkbox-wrapper label {
+      margin: 0;
     }
     .checkbox-wrapper a {
       color: #007bff;
@@ -109,9 +113,7 @@
 
       <div class="checkbox-wrapper">
         <input type="checkbox" id="agree" required />
-        <label for="agree">
-          我已知晓并接受 <a onclick="showModal()">个人信息收集使用规则</a>
-        </label>
+        <label for="agree">我已知晓并接受 <a onclick="showModal()">个人信息收集使用规则</a></label>
       </div>
 
       <button type="submit" class="submit-btn">预约咨询</button>
